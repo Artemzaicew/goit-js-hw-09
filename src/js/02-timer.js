@@ -41,7 +41,7 @@ function initializeFlatpickr() {
     },
   };
   flatpickr(datetimePickerEl, flatpickrOptions);
-}
+};
 
 function startTimer(selectedDate) {
   const currentDate = Date.now();
@@ -56,7 +56,7 @@ function startTimer(selectedDate) {
   datetimePickerEl.disabled = true;
   const dataToDisplay = convertMs(delta);
   updateTimer(dataToDisplay);
-}
+};
 
 function convertMs(ms) {
   const second = 1000;
@@ -70,15 +70,15 @@ function convertMs(ms) {
   const seconds = Math.floor((((ms % day) % hour) % minute) / second);
 
   return { days, hours, minutes, seconds };
-}
+};
 
 function formatTime(value) {
   return String(value).padStart(2, 0);
-}
+};
 
 function updateTimer({ days, hours, minutes, seconds }) {
     dataDays.textContent = formatTime(days);
     dataHours.textContent = formatTime(hours);
     dataMinutes.textContent = formatTime(minutes);
     dataSeconds.textContent = formatTime(seconds);
-}
+};
